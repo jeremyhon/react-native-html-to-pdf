@@ -134,7 +134,7 @@ public class PdfConverter implements Runnable {
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) return null;
 
         return new PrintAttributes.Builder()
-                .setMediaSize(PrintAttributes.MediaSize.NA_GOVT_LETTER)
+                .setMediaSize(PrintAttributes.MediaSize.ISO_A4.asLandscape())
                 .setResolution(new PrintAttributes.Resolution("RESOLUTION_ID", "RESOLUTION_ID", 600, 600))
                 .setMinMargins(PrintAttributes.Margins.NO_MARGINS)
                 .build();
